@@ -1,10 +1,18 @@
 import "./App.css";
+import LayOut from "./components/layOut.tsx";
+import Calculator from "./components/calculator.tsx";
+import NumKey from "./components/numKey.tsx";
+import Key from "./components/key.tsx";
 
 function App() {
   return (
     <>
-
-      <h4 className="text-2xl text-blue-300">hello</h4>
+      <LayOut>
+        <Calculator>
+          <NumKey numKey={2} />
+          <Key operator="/" />
+        </Calculator>
+      </LayOut>
     </>
   );
 }
